@@ -22,7 +22,7 @@ gem 'rails-i18n'
 
 gem 'lograge'
 gem 'slim-rails'
-# gem 'active_link_to'
+gem 'active_link_to'
 
 gem 'simple_form'
 gem 'bootstrap-sass'

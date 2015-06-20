@@ -14,7 +14,7 @@
         | Nova Nota
 
   ul.nav.nav-pills.nav-stacked
-    li = link_to notas_path
+    = active_link_to notas_path, wrap_tag: :li, active: :exclusive
       .glyphicon.glyphicon-list
       | Todas as Notas
 
