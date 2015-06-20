@@ -31,8 +31,8 @@ gem 'bootstrap_flash_messages'
 # gem 'bootstrap-wysihtml5-rails'
 gem 'nprogress-rails'
 
-# gem 'kaminari'
-# gem 'kaminari-i18n'
+gem 'kaminari'
+gem 'kaminari-i18n'
 
 # gem 'devise'
 # gem 'devise-i18n'
