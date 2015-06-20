@@ -1,0 +1,18 @@
+pt-BR:
+  time:
+    formats:
+      default: "%d de %B, %H:%M"
+
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: ~ 1 hora
+        other: '± %{count} horas'
+      about_x_months:
+        one: ~ 1 mês
+        other: ~ %{count} meses
+      about_x_years:
+        one: ~ 1 ano
+        other: ~ %{count} anos
+      less_than_x_minutes:
+        one: alguns segundos
