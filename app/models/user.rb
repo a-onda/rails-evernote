@@ -6,5 +6,9 @@ class User < ActiveRecord::Base
 
   has_many :notas
 
+  def nome
+    email.split('@').first
+  end
+
   def to_s; email end
 end

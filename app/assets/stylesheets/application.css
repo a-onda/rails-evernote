@@ -4,4 +4,7 @@
  *= require nprogress-bootstrap
  *= require_tree .
  */
-body { margin-top: 20px; }
+body { margin-top: 20px; background-color: #eee; }
+.avatar {
+  padding: 0 10% 10%;
+}

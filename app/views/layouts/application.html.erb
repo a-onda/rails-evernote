@@ -11,8 +11,15 @@
 <body>
 
 <div class="container-fluid">
-  <%= flash_messages(:close, :fade) %>
-  <%= yield %>
+  <div class="row">
+    <div class="col-sm-2">
+      <%= render 'layouts/sidebar' %>
+    </div>
+    <div class="col-sm-10">
+      <%= flash_messages(:close, :fade) %>
+      <%= yield %>
+    </div>
+  </div>
 </div>
 
 </body>
