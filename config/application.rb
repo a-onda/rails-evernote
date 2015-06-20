@@ -17,6 +17,14 @@ Bundler.require(*Rails.groups)
 
 module Nevernote
   class Application < Rails::Application
+    config.generators do |g|
+      g.assets false
+      g.helper false
+      g.javascripts false
+      g.stylesheets false
+      g.test_framework false
+    end
+
     config.i18n.default_locale = :'pt-BR'
     config.time_zone = 'Brasilia'
     # Settings in config/environments/* take precedence over those specified here.
