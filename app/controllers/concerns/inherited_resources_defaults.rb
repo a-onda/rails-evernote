@@ -9,7 +9,7 @@ module InheritedResourcesDefaults
 
   protected
 
-  # def begin_of_association_chain; current_user end
+  def begin_of_association_chain; current_user end
 
   def end_of_association_chain; super.page( params[:page] ) end
 end
