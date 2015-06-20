@@ -1,0 +1,36 @@
+.panel.panel-default
+  .panel-heading
+    .pull-right
+      = link_to new_<%= singular_table_name %>_path, class: 'btn btn-success btn-xs' do
+          .glyphicon.glyphicon-plus
+          | Criar <%= human_name %>
+    .panel-title
+      .badge = @<%= plural_table_name %>.total_count
+      | | Lista de <%= plural_table_name.titleize %>
+
+  table.table
+    thead
+      tr
+<% attributes.each do |attribute| -%>
+        th <%= attribute.human_name %>
+<% end -%>
+        th Alterado
+        th Criado
+        th
+        th
+        th
+
+    tbody
+      - @<%= plural_table_name %>.each do |<%= singular_table_name %>|
+        tr
+<% attributes.each do |attribute| -%>
+          td = <%= singular_table_name %>.<%= attribute.name %>
+<% end -%>
+          td[width=1 style='white-space: nowrap'] = time_ago_in_words <%= singular_table_name %>.updated_at
+          td[width=1 style='white-space: nowrap'] = l <%= singular_table_name %>.created_at
+          td[width=1] = link_to 'exibir', <%= singular_table_name %>, class: 'btn btn-xs btn-default'
+          td[width=1] = link_to 'editar', edit_<%= singular_table_name %>_path(<%= singular_table_name %>), class: 'btn btn-xs btn-info'
+          td[width=1] = link_to 'excluir', <%= singular_table_name %>, class: 'btn btn-xs btn-danger', :method => :delete, data: {confirm: 'Tem Certeza?', disable_with: 'enviando...'}
+
+  .panel-footer.text-center
+    = paginate @<%= plural_table_name %>

@@ -1,0 +1,9 @@
+.panel.panel-success
+  .panel-heading
+    .panel-title
+      => link_to <%= plural_table_name %>_path do
+       .glyphicon.glyphicon-list
+      | | Criar <%= human_name %>
+
+  .panel-body
+    == render 'form'

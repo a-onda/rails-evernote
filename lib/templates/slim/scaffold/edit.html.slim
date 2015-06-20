@@ -1,0 +1,24 @@
+.panel.panel-info
+  .panel-heading
+    .pull-right
+      small.text-muted = l @<%= singular_table_name %>.created_at
+    .panel-title
+      => link_to <%= plural_table_name %>_path do
+       .glyphicon.glyphicon-list
+      | | Editar <%= human_name %>
+
+  .panel-body
+    == render 'form'
+
+  .panel-footer
+    .pull-right
+      = link_to <%= singular_table_name %>_path(@<%= singular_table_name %>), method: :delete, class: 'btn btn-danger btn-xs', data: {confirm: 'Tem certeza?', disable_with: 'enviando...'} do
+        .glyphicon.glyphicon-trash
+        | excluir
+
+    small.text-muted
+      - if @<%= singular_table_name %>.created_at != @<%= singular_table_name %>.updated_at
+        | Alterado #{ time_ago_in_words @<%= singular_table_name %>.updated_at } atrás
+      - else
+        | nenhuma alteração
+
