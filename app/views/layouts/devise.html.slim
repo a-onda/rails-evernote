@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title Login
+    = stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'
+    css:
+      html, body {
+        height: 100%;
+      }
+      .absolute-center {
+        width: 100%;
+        height: 50%;
+        display: table;
+        height: auto;
+        margin: auto;
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+      }
+
+  body
+    .absolute-center
+      .row
+        .col-sm-4.col-sm-offset-4
+          == yield
