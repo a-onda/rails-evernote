@@ -52,7 +52,7 @@ gem 'inherited_resources'
 group :development, :test do
   gem 'mysql2'
   gem 'faker'
-  # gem 'seedbank'
+  gem 'seedbank'
   # gem 'seed-fu'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # gem 'byebug'
