@@ -97,8 +97,8 @@ group :console do
 end
 
 group :production do
-  # gem 'rails_12factor'
-  # gem 'pg'
-  # gem 'puma'
+  gem 'rails_12factor'
+  gem 'pg'
+  gem 'puma'
   # gem 'unicorn'
 end
