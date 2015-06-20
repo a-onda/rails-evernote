@@ -6,8 +6,8 @@
         .glyphicon.glyphicon-edit
 
   .panel-body
-    img.img-responsive.img-circle.avatar src='//keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg'
-
+    = image_tag "//robohash.org/#{current_user.email}?size=200x200&gravatar=yes", \
+                class: 'img img-responsive img-circle avatar'
     .text-center
       = link_to new_nota_path, class: 'btn btn-success btn-lg'
         .glyphicon.glyphicon-plus
