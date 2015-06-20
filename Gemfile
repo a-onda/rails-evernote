@@ -39,7 +39,7 @@ gem 'nprogress-rails'
 # gem 'devise-i18n-views'
 # gem 'devise-bootstrap-views'
 
-# gem 'inherited_resources'
+gem 'inherited_resources'
 # gem 'ransack'
 # gem 'acts-as-taggable-on'
 # gem 'email_validator'

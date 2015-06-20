@@ -1,0 +1,1 @@
+InheritedResources::Base.include InheritedResourcesDefaults if defined? InheritedResources
