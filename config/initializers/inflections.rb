@@ -1,16 +1,12 @@
-# Be sure to restart your server when you modify this file.
+# https://github.com/tapajos/brazilian-rails/blob/master/lib/inflector_portuguese.rb
+ActiveSupport::Inflector.inflections do |inflect|
+  inflect.plural(/ao$/i,  'oes')
+  inflect.singular(/oes$/i, 'ao')
 
-# Add new inflection rules using the following format. Inflections
-# are locale specific, and you may define rules for as many different
-# locales as you wish. All of these examples are active by default:
-# ActiveSupport::Inflector.inflections(:en) do |inflect|
-#   inflect.plural /^(ox)$/i, '\1en'
-#   inflect.singular /^(ox)en/i, '\1'
-#   inflect.irregular 'person', 'people'
-#   inflect.uncountable %w( fish sheep )
-# end
+  inflect.plural(/m$/i,  'ns')
+  inflect.singular(/ns$/i, 'm')
 
-# These inflection rules are supported but not enabled by default:
-# ActiveSupport::Inflector.inflections(:en) do |inflect|
-#   inflect.acronym 'RESTful'
-# end
+  # correntista
+  inflect.plural(/ta$/i,  'tas')
+  inflect.singular(/tas$/i, 'ta')
+end
