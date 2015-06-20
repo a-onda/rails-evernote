@@ -1,0 +1,7 @@
+= simple_form_for(@nota) do |f|
+  = f.error_notification
+
+  = f.input :titulo
+  = f.input :texto
+
+  = f.button :submit, class: 'btn btn-primary', data: {disable_with: 'enviando...'}

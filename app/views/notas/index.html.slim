@@ -1,0 +1,34 @@
+.panel.panel-default
+  .panel-heading
+    .pull-right
+      = link_to new_nota_path, class: 'btn btn-success btn-xs' do
+          .glyphicon.glyphicon-plus
+          | Criar Nota
+    .panel-title
+      .badge = @notas.total_count
+      | | Lista de Notas
+
+  table.table
+    thead
+      tr
+        th Titulo
+        th Texto
+        th Alterado
+        th Criado
+        th
+        th
+        th
+
+    tbody
+      - @notas.each do |nota|
+        tr
+          td = nota.titulo
+          td = nota.texto
+          td[width=1 style='white-space: nowrap'] = time_ago_in_words nota.updated_at
+          td[width=1 style='white-space: nowrap'] = l nota.created_at
+          td[width=1] = link_to 'exibir', nota, class: 'btn btn-xs btn-default'
+          td[width=1] = link_to 'editar', edit_nota_path(nota), class: 'btn btn-xs btn-info'
+          td[width=1] = link_to 'excluir', nota, class: 'btn btn-xs btn-danger', :method => :delete, data: {confirm: 'Tem Certeza?', disable_with: 'enviando...'}
+
+  .panel-footer.text-center
+    = paginate @notas

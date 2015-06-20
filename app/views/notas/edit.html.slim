@@ -1,0 +1,24 @@
+.panel.panel-info
+  .panel-heading
+    .pull-right
+      small.text-muted = l @nota.created_at
+    .panel-title
+      => link_to notas_path do
+       .glyphicon.glyphicon-list
+      | | Editar Nota
+
+  .panel-body
+    == render 'form'
+
+  .panel-footer
+    .pull-right
+      = link_to nota_path(@nota), method: :delete, class: 'btn btn-danger btn-xs', data: {confirm: 'Tem certeza?', disable_with: 'enviando...'} do
+        .glyphicon.glyphicon-trash
+        | excluir
+
+    small.text-muted
+      - if @nota.created_at != @nota.updated_at
+        | Alterado #{ time_ago_in_words @nota.updated_at } atrás
+      - else
+        | nenhuma alteração
+

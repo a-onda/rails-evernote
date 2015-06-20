@@ -1,0 +1,9 @@
+.panel.panel-success
+  .panel-heading
+    .panel-title
+      => link_to notas_path do
+       .glyphicon.glyphicon-list
+      | | Criar Nota
+
+  .panel-body
+    == render 'form'
