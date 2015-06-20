@@ -26,7 +26,7 @@ gem 'slim-rails'
 
 gem 'simple_form'
 gem 'bootstrap-sass'
-# gem 'bootstrap_flash_messages'
+gem 'bootstrap_flash_messages'
 # gem 'bootstrap_tokenfield_rails'
 # gem 'bootstrap-wysihtml5-rails'
 # gem 'nprogress-rails'
