@@ -23,7 +23,7 @@
       - @notas.each do |nota|
         tr
           td = nota.titulo
-          td = nota.texto
+          td = truncate nota.texto, length: 80
           td[width=1 style='white-space: nowrap'] = time_ago_in_words nota.updated_at
           td[width=1 style='white-space: nowrap'] = l nota.created_at
           td[width=1] = link_to 'exibir', nota, class: 'btn btn-xs btn-default'
