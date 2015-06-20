@@ -29,7 +29,7 @@ gem 'bootstrap-sass'
 gem 'bootstrap_flash_messages'
 # gem 'bootstrap_tokenfield_rails'
 # gem 'bootstrap-wysihtml5-rails'
-# gem 'nprogress-rails'
+gem 'nprogress-rails'
 
 # gem 'kaminari'
 # gem 'kaminari-i18n'

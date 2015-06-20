@@ -1,5 +1,7 @@
 /*
  *= require bootstrap-sass
+ *= require nprogress
+ *= require nprogress-bootstrap
  *= require_tree .
  */
 body { margin-top: 20px; }
