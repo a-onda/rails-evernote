@@ -21,4 +21,8 @@ html
     .absolute-center
       .row
         .col-sm-4.col-sm-offset-4
+          - if flash[:alert]
+            .alert.alert-danger.alert-dismissable.fade.in
+              button.close[data-dismiss='alert'] ×
+              = flash[:alert]
           == yield
