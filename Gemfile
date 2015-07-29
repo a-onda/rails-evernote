@@ -3,7 +3,7 @@ ruby '2.2.2'
 
 # DEFAULT RAILS GEMS
 
-gem 'rails', '4.2.2'
+gem 'rails', '4.2.3'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'sass-rails', '~> 5.0'
