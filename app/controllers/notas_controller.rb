@@ -4,7 +4,7 @@ class NotasController < InheritedResources::Base
   private
 
     def nota_params
-      params.require(:nota).permit(:user_id, :titulo, :texto)
+      params.require(:nota).permit(:titulo, :texto)
     end
 end
 
